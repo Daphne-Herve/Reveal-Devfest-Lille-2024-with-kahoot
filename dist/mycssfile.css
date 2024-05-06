@@ -1,15 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap');
+
 @media screen and (min-width: 401px) and (max-width: 600px) {
   .slides {
-    color: aqua;
-    font-size: 64px;
+    font-family: "Zilla Slab Highlight", serif;
+    font-weight: 700;
+    p {
+      font-size: 64px;
+      text-align: left;
+    }
+    h1 {
+      font-family: "Zilla Slab Highlight", serif;
+      font-weight: 700;
+      font-size: 300px;
+      font-weight: bold;
+      text-align: left;
+    }
+    h2 {
+      font-family: "Zilla Slab Highlight", serif;
+      font-weight: 700;
+    }
   }
 }
 
-
 @media screen and (min-width: 101px) and (max-width: 400px) {
   .slides {
-    color: pink;
-    font-size: 72px;
+    font-family: "Zilla Slab Highlight", serif;
+    font-weight: 700;
+    p {
+      font-size: 72px;
+      text-align: left;
+    }
+    h1 {
+      font-family: "Zilla Slab Highlight", serif;
+      font-weight: 700;
+      text-align: left;
+      font-size: 300px;
+      font-weight: bold;
+    }
+    h2 {
+      font-family: "Zilla Slab Highlight", serif;
+      font-weight: 700;
+      font-weight: bold;
+      font-size: 80px;
+    }
+  }
+}
+
+.slide-css {
+  h1 {
+  font-family: "Zilla Slab Highlight", serif;
+  text-align: left;
+  font-size: 300px;
+  font-weight: bold;
+  }
+  h2 {
+    font-family: "Zilla Slab Highlight", serif;
+    font-weight: bold;
+    font-size: 80px;
+  }
+  p {
+    font-weight: bold;
+    text-align: left;
+    font-family: "Zilla Slab Highlight", serif;
+    font-weight: 700;
   }
 }
 
