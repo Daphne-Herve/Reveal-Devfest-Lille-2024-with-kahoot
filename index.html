@@ -29,19 +29,15 @@
 					</h2>
 				</section>
 				<section>
-					<p style="text-align: center;">* Pour ce talk, les prénoms ont été modifiés
+					<p style="text-align: center;">Qui a déjà misé sur des paris sportifs ?
 					</p>
 				</section>
 				<section>
-					<p style="text-align: center;">Postman ?
+					<p style="text-align: center;">* Pour ce talk, les faits sont tirés de la vie réelle
 					</p>
 				</section>
 				<section>
-					<p style="text-align: center;">Newman ?
-					</p>
-				</section>
-				<section>
-					<p style="text-align: center;">Flows ?
+					<p style="text-align: center;">* les noms ont été modifiés
 					</p>
 				</section>
 			</section>
@@ -64,12 +60,6 @@
 						est bon !</p>
 					<p class="dialogue" style="padding-right: 5%;">Moi : sûr ? ok ok</p>
 				</section>
-				<section>
-					<img src="./dist/assets/avatar1.JPG" alt="avatar qui doute">
-				</section>
-				<section>
-					<p style="text-align: center;">Tests fumigatoires</p>
-				</section>
 			</section>
 
 			<section class="slide-css">
@@ -77,7 +67,26 @@
 					<h1>
 						2
 					</h1>
-					<p>Use case 2 : Tu utilises des APIs publiques ou exposées par des partenaires.</p>
+					<p>Use case 2 : Tu modifies les champs de la base de données prod.
+					</p>
+				</section>
+				<section>
+					<img src="./dist/assets/mise-forte-poker.png" alt="jetons de poker mise faible">
+				</section>
+				<section>
+					<p class="dialogue" style="padding-right: 5%;">Moi : Les règles de transformation sont bien respectées ? </p>
+					<p class="dialogue" style="text-align: right; color: gold; padding-left: 5%;">Cyril : Oui, j’ai testé tous les
+						cas. On est tout bon</p>
+					<p class="dialogue" style="padding-right: 5%;">Moi : sûr ? ok ok</p>
+				</section>
+			</section>
+
+			<section class="slide-css">
+				<section>
+					<h1>
+						3
+					</h1>
+					<p>Use case 3 : Tu utilises des APIs publiques ou exposées par des partenaires.</p>
 				</section>
 				<section>
 					<img style="margin-top: -5%;" src="./dist/assets/mise-medium-poker.png" alt="jetons de poker mise moyenne">
@@ -90,25 +99,16 @@
 						des fois…..</p>
 					<p class="dialogue" style="padding-right: 5%;">Moi : C’est pas stable ? On vérifie ensemble ?</p>
 				</section>
-				<section>
-					<p style="text-align: center;">Monitoring et alerte</p>
-				</section>
-				<section>
-					<p style="text-align: center;">Problème c'est payant</p>
-				</section>
-				<section>
-					<img src="./dist/assets/avatar4.JPG" alt="autre avatar qui dit c'est comme ça">
-				</section>
 			</section>
 			<section class="slide-css">
 				<section>
 					<h1>
-						3
+						4
 					</h1>
-					<p>Use case 3 : Tu travailles avec les équipes fonctionnelles.</p>
+					<p>Use case 4 : Tu travailles avec les équipes fonctionnelles.</p>
 				</section>
 				<section>
-					<img style="margin-top: -5%;" src="./dist/assets/mise-forte-poker.png" alt="jetons de poker mise forte">
+					<img style="margin-top: -5%;" src="./dist/assets/mise-faible-poker.png" alt="jetons de poker mise forte">
 				</section>
 				<section>
 					<p class="dialogue" style="text-align: right; color: rgb(156, 114, 235);  padding-left: 5%;">Michel : C’est
@@ -122,45 +122,99 @@
 					</p>
 				</section>
 				<section>
-					<img src="./dist/assets/avatar2.JPG" alt="avatar qui se cache les yeux">
-				</section>
-				<section>
 					<p class="dialogue" style="padding-right: 5%;">Moi : Pas de soucis, j’ai une solution pour ça.</p>
 				</section>
-				<section>
-					<p style="text-align: center;">Visualisation et Flows</p>
-				</section>
 			</section>
+
+
+			<!-- Partie 2 step by step -->
 
 			<section class="slide-css">
 				<section>
-					<p style="text-align: center;">Conclusion</p>
+					<h1>
+						1
+					</h1>
+					<p>Use case 1 : Tu montes les libs de version de ton app et tu fais des modifications sur un ou plusieurs
+						microservices ?
+					</p>
 				</section>
 				<section>
-					<img src="./dist/assets/avatar3.JPG" alt="avatar zen">
+					<p>On va parler de tests de non regression</p>
+				</section>
+				<section>
+					<p>pour rester dans le thème du pari, imaginons que tu travailles pour la française des jeux</p>
+				</section>
+				<section>
+					<p>On va s'appuyer sur le swagger</p>
+				</section>
+				<section>
+					<img src="./dist/assets/exemple-swagger.png" alt="">
+				</section>
+				<section>
+					<p>On peut créer une requêtes par appel du swagger</p>
+				</section>
+				<section>
+					<p>Il nous faut un point de référence à comparer avec le localhost</p>
+				</section>
+				<section>
+					<p>On utilise les getter et les setter</p>
+				</section>
+				<section>
+					<p>On compare les deux résultats</p>
+				</section>
+			</section>
+			<section class="slide-css">
+				<section>
+					<h2>Bonus</h2>
+				</section>
+				<section>
+					<p>Documenter</p>
 				</section>
 			</section>
 
 
 
-			<!-- <section class="slide-css">
-				 ------- Commentaire : Section dédiée à la modification de bdd
+			<section class="slide-css">
 				<section>
 					<h1>
 						2
 					</h1>
-					<p>Use case 2 : Tu fusionnes 2 champs de base de données sur une table “Utilisateurs” avec un script.
+					<p>Use case 2 : Tu modifies les champs de la base de données prod.
 					</p>
 				</section>
 				<section>
-					<img style="margin-top: -5%;" src="./dist/assets/mise-medium-poker.png" alt="jetons de poker mise moyenne">
+					<p>Cette fois on travaille autour des spécifications ET en AMONT !</p>
 				</section>
 				<section>
-					<p>Moi : Les api sont disponibles à tout moment de manière constante ? Tu en es sûr ?</p>
-					<p style="text-align: right;">Richard : Oui, humm…c’est vrai que des fois…..</p>
-					<p>Moi : C’est pas stable ? On vérifie ensemble ?</p>
+					<p>On s'appuie sur les règles de transformation</p>
 				</section>
-			</section> -->
+				<section>
+					<p>Une règle = un test</p>
+				</section>
+				<section>
+					<p>On écrit les tests avant</p>
+				</section>
+				<section>
+					<p>On sélectionne notre échantillon de test</p>
+				</section>
+				<section>
+					<p>On exécute les test avant</p>
+				</section>
+				<section>
+					<p>On passe le script qui modifie la base de données</p>
+				</section>
+				<section>
+					<p>On exécute le même test après</p>
+				</section>
+				<section>
+					<p>On compare les résultats</p>
+				</section>
+			</section>
+			</section>
+
+
+
+
 		</div>
 	</div>
 
