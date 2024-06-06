@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/mycssfile.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="slide-css">
+        <section>
+          <h2>Prêts à parier sur la santé de vos APIs ?
+          </h2>
+        </section>
+        <section>
+          <p style="text-align: center;">Qui a déjà misé sur des paris sportifs ?
+          </p>
+        </section>
+        <section>
+          <p style="text-align: center;">* Pour ce talk, les faits sont tirés de la vie réelle
+          </p>
+        </section>
+        <section>
+          <p style="text-align: center;">* les noms ont été modifiés
+          </p>
+        </section>
+      </section>
+      <section class="slide-css">
+        <section>
+          <h1>
+            1
+          </h1>
+          <p>Use case 1 : Tu montes les libs de version de ton app et tu fais des modifications sur un ou plusieurs
+            microservices ?
+          </p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-faible-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p class="dialogue" style="padding-right: 5%;">Moi : Les endpoints sont impactés. Il n’y aura pas de
+            régression ? </p>
+          <p class="dialogue" style="text-align: right; color: gold; padding-left: 5%;">Denis : Oui, j’ai vérifié, on
+            est bon !</p>
+          <p class="dialogue" style="padding-right: 5%;">Moi : sûr ? ok ok</p>
+        </section>
+      </section>
+
+      <section class="slide-css">
+        <section>
+          <h1>
+            2
+          </h1>
+          <p>Use case 2 : Tu modifies les champs de la base de données prod.
+          </p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-forte-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p class="dialogue" style="padding-right: 5%;">Moi : Les règles de transformation sont bien respectées ? </p>
+          <p class="dialogue" style="text-align: right; color: gold; padding-left: 5%;">Cyril : Oui, j’ai testé tous les
+            cas. On est tout bon</p>
+          <p class="dialogue" style="padding-right: 5%;">Moi : sûr ? ok ok</p>
+        </section>
+      </section>
+
+      <section class="slide-css">
+        <section>
+          <h1>
+            3
+          </h1>
+          <p>Use case 3 : Tu utilises des APIs publiques ou exposées par des partenaires.</p>
+        </section>
+        <section>
+          <img style="margin-top: -5%;" src="./dist/assets/mise-medium-poker.png" alt="jetons de poker mise moyenne">
+        </section>
+        <section>
+          <p class="dialogue" style="padding-right: 5%;">Moi : Les api sont disponibles à tout moment de manière
+            constante ? Tu en es sûr ?</p>
+          <p class="dialogue" style="text-align: right; color: rgb(124, 246, 242); padding-left: 5%;">Richard : Oui,
+            humm…c’est vrai que
+            des fois…..</p>
+          <p class="dialogue" style="padding-right: 5%;">Moi : C’est pas stable ? On vérifie ensemble ?</p>
+        </section>
+      </section>
+      <section class="slide-css">
+        <section>
+          <h1>
+            4
+          </h1>
+          <p>Use case 4 : Tu travailles avec les équipes fonctionnelles.</p>
+        </section>
+        <section>
+          <img style="margin-top: -5%;" src="./dist/assets/mise-faible-poker.png" alt="jetons de poker mise forte">
+        </section>
+        <section>
+          <p class="dialogue" style="text-align: right; color: rgb(156, 114, 235);  padding-left: 5%;">Michel : C’est
+            sympa tes alertes,
+            mais j’ai besoin de
+            présenter les résultats au
+            client.
+          </p>
+          <p class="dialogue" style="text-align: right; color: rgb(156, 114, 235); padding-left: 2%;">
+            On veut montrer que ça marche bien et pas l’inverse.
+          </p>
+        </section>
+        <section>
+          <p class="dialogue" style="padding-right: 5%;">Moi : Pas de soucis, j’ai une solution pour ça.</p>
+        </section>
+      </section>
+
+
+      <!-- Partie 2 step by step -->
+
+      <section class="slide-css">
+        <section>
+          <h1>
+            1
+          </h1>
+          <p>Use case 1 : Tu montes les libs de version de ton app et tu fais des modifications sur un ou plusieurs
+            microservices ?
+          </p>
+        </section>
+        <section>
+          <p>On va parler de tests de non regression</p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-faible-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p>Probabilité : medium</p>
+          <p>Risque : medium</p>
+        </section>
+        <section>
+          <p>pour rester dans le thème du pari, imaginons que tu travailles pour la française des jeux</p>
+        </section>
+        <section>
+          <p>On va s'appuyer sur le swagger</p>
+        </section>
+        <section>
+          <img src="./dist/assets/exemple-swagger.png" alt="">
+        </section>
+        <section>
+          <p>On peut créer une requêtes par appel du swagger</p>
+        </section>
+        <section>
+          <p>Il nous faut un point de référence à comparer avec le localhost</p>
+        </section>
+        <section>
+          <p>On utilise les getter et les setter</p>
+        </section>
+        <section>
+          <p>On compare les deux résultats</p>
+        </section>
+      </section>
+      <section class="slide-css">
+        <section>
+          <h2>Bonus</h2>
+        </section>
+        <section>
+          <p>Documenter</p>
+        </section>
+      </section>
+
+
+
+      <section class="slide-css">
+        <section>
+          <h1>
+            2
+          </h1>
+          <p>Use case 2 : Tu modifies les champs de la base de données prod.
+          </p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-forte-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p>Probabilité : faible</p>
+          <p>Risque : critique</p>
+        </section>
+        <section>
+          <p>Cette fois on travaille autour des spécifications ET en AMONT !</p>
+        </section>
+        <section>
+          <p>On s'appuie sur les règles de transformation</p>
+        </section>
+        <section>
+          <p>Une règle = un test</p>
+        </section>
+        <section>
+          <p>On écrit les tests avant</p>
+        </section>
+        <section>
+          <p>On sélectionne notre échantillon de test</p>
+        </section>
+        <section>
+          <p>On exécute les test avant</p>
+        </section>
+        <section>
+          <p>On passe le script qui modifie la base de données</p>
+        </section>
+        <section>
+          <p>On exécute le même test après</p>
+        </section>
+        <section>
+          <p>On compare les résultats</p>
+        </section>
+      </section>
+
+
+      <section class="slide-css">
+        <section>
+          <h1>
+            3
+          </h1>
+          <p>Use case 3 : Tu utilises des APIs publiques ou exposées par des partenaires ?
+          </p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-forte-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p>Probabilité : medium</p>
+          <p>Risque : fort</p>
+        </section>
+        <section>
+          <p>Ici on va parler automatisation</p>
+        </section>
+        <section>
+          <p>Il faut que notre collection soit bien structurée avec des tests rédigés</p>
+        </section>
+        <section>
+          <p>Ici j'ai écris un test qui calcule le temps de réponse du call API</p>
+        </section>
+        <section>
+          <p>On va dans la collection elle même pour automatiser</p>
+        </section>
+        <section>
+          <p>Pour vérifier on déclenche une erreur</p>
+        </section>
+        <section>
+          <p>Je reçois un mail pour m'alerter</p>
+        </section>
+      </section>
+      <section class="slide-css">
+        <section>
+          <h2>Attention</h2>
+        </section>
+        <section>
+          <p>C'est payant ?</p>
+        </section>
+        <section>
+          <p>La réponse est OUI, mais...</p>
+        </section>
+        <section>
+          <p>Il y a Newman</p>
+        </section>
+      </section>
+
+      <section class="slide-css">
+        <section>
+          <h1>
+            4
+          </h1>
+          <p>Use case 4 : Tu travailles avec les équipes fonctionnelles.
+          </p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-faible-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p>Probabilité : élevée</p>
+          <p>Risque : faible</p>
+        </section>
+        <section>
+          <p>
+          <ol>
+            <li>J'aimerai</li>
+            <li>des résultats API,</li>
+            <li>visuels,</li>
+            <li>et en temps réél </li>
+          </ol>
+          </p>
+        </section>
+        <section>
+          <p>Heureusement il y a Flows</p>
+        </section>
+      </section>
+      <section class="slide-css">
+        <section>
+          <h2>
+            Par où commencer
+          </h2>
+        </section>
+        <section>
+          <p>
+            Prioriser avec le Risk based testing
+          </p>
+        </section>
+        <section>
+          <p>Soit la probabilité : peu probable à très probable</p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-faible-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <p>Soit sur l'impact : de faible à critique</p>
+        </section>
+        <section>
+          <img src="./dist/assets/mise-forte-poker.png" alt="jetons de poker mise faible">
+        </section>
+        <section>
+          <h2>Conclusion</h2>
+        </section>
+        <section>
+          <h2>A vous de jouer !</h2>
+        </section>
+      </section>
+
+
+      </section>
+
+
+
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
